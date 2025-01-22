@@ -1,0 +1,48 @@
+<div class="candidate">
+    <label class="title">Candidate Form</label>
+
+    <div class="container">
+        <form [formGroup]="CandidateForm" (ngSubmit)="onSubmit()">
+            <div class="row">
+                <div class="form-title">
+                    <label for="name">Name:</label>
+                </div>
+                <div class="form-fields">
+                    <input type="text" formControlName="name" name="name" required />
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-title">
+                    <label for="skills">Skills:</label>
+                </div>
+                <div class="form-fields">
+                    <input type="text" formControlName="skills" name="skills" required />
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-title">
+                    <label for="experience">Experience:</label>
+                </div>
+                <div class="form-fields">
+                    <input type="text" formControlName="experience" name="experience" required />
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-title">
+                    <label for="designation">Designation</label>
+                </div>
+                <div class="form-fields">
+                    <select id="designation" formControlName="designation">
+                        <option value="" selected></option>
+                        <option value="Software Developer">Software Developer</option>
+                        <option value="Senior Software Developer">Senior Software Developer</option>
+                        <option value="Quality Assurance">Quality Assurance</option>
+                        <option value="Technical Lead">Technical Lead</option>
+                        <option value="Manager">Manager</option>
+                    </select>
+                </div>
+            </div>
+            <button type="submit" [disabled]="!CandidateForm.valid">Submit</button>
+        </form>
+    </div>
+</div>

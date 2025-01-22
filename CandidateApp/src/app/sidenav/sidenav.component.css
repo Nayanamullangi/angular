@@ -1,0 +1,35 @@
+.sidebar {
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    border-right: 1px solid #e5dbdb;
+    width: 13%;
+    padding-left: 10px;
+    .pd-15{
+        padding: 0 15px;
+    }
+    h1{
+        margin-top: 13px;
+    }
+  }
+  
+  .sidebar a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #5e448d;
+    display: block;
+  }
+  
+  .main {
+    margin-left: 160px; /* Same as the width of the sidenav */
+    padding: 0px 10px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidebar a {font-size: 23px;}
+  }

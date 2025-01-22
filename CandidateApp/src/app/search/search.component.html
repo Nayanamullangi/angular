@@ -1,0 +1,21 @@
+<div class="search-container">
+    <input 
+      type="text" 
+      [(ngModel)]="searchQuery" 
+      placeholder="Search by name or skill" 
+      (input)="onSearch()"
+    />
+    <button (click)="resetSearch()">Reset</button>
+  
+    <div *ngIf="candidates.length > 0; else noResults">
+      <ul>
+        <li *ngFor="let candidate of candidates">
+          <strong>{{ candidate.name }}</strong> - {{ candidate.skill }} ({{ candidate.experience }})
+        </li>
+      </ul>
+    </div>
+  
+    <ng-template #noResults>
+      <p>No candidates found matching your search.</p>
+    </ng-template>
+</div>

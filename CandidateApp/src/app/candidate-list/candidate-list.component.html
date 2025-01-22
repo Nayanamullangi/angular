@@ -1,0 +1,20 @@
+<div class="candidate-dashboard">
+    <label *ngIf="this.CandidateService.searchedCandidate | async">{{candidatesData.length}} Results Found</label>
+    <div class="block">
+        <div class="card" *ngFor="let candidate of candidatesData; let index=index;">
+            <img class="profile-icon" src="assets/candidate.png" alt="Avatar">
+            <div class="actions">
+                <button type="button" class="edit" (click)="edit(candidate.id)">Edit</button>
+                <button type="button" (click)="delete(candidate.id)">Delete</button>
+            </div>
+            <div class="container">
+                <h4><b>{{candidate.name}}</b></h4>
+                <p>{{candidate.designation}}</p>
+                <p>{{candidate.skill}}</p>
+                <p>{{candidate.experience}}</p>
+            </div>
+        </div>
+
+    </div>
+
+</div>

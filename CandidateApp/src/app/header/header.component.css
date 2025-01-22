@@ -1,0 +1,40 @@
+/* Basic styles for the navbar */
+.navbar {
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Align the content vertically */
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+  }
+  
+  /* Styling for the dropdown */
+  .team-dropdown {
+    width: 100%; /* Make the dropdown take up full width of its container */
+    max-width: 300px; /* Limit the width of the dropdown on larger screens */
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    color: #333;
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+    cursor: pointer;
+  }
+  
+  /* Optional: Add hover effect to dropdown */
+  .team-dropdown:hover {
+    border-color: #007bff;
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 600px) {
+    .navbar {
+      padding: 10px;
+    }
+  
+    .team-dropdown {
+      width: 90%; /* Make the dropdown take up 90% of the screen width on mobile */
+      max-width: none; /* Remove max-width restriction on smaller screens */
+    }
+  }
